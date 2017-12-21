@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <tr>
+        <th>域名</th>
+        <th>搜索</th>
+    </tr>
+    {% for i in data %}
+        <tr>
+            <td>{{ i }}</td>
+            <td><a href="https://www.google.com/search?q={{ i.split(".")[0] }}" target="_blank">google搜索</a></td>
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
